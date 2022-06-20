@@ -1,0 +1,120 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+form{
+color:lightgrey;
+background-color:white;
+border:1px solid black;
+margin: 25px 400px 75px 400px;
+align:center;
+color:black;
+}
+input[type=text], select {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  }
+  body{background-color:lightpink;
+  
+  }
+  .star{
+  width:100%;
+  background-color:black;
+  overflow:auto;
+  position:sticky;
+  top:0px;
+  z-index:5;
+  }
+  .star a{
+  float:left;
+  text-align:center;
+  padding:12px;
+  color:white;
+  text-decoration:none;
+  font-size:17px;
+  }
+  .star a:hover{
+  background-color:lightblack;
+  }
+  .active{
+  background-color:blue;
+  }
+</style>
+<script>
+function validateEmail()
+{
+email=document.getElementById('email');
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+if(!(email.value.match(mailformat)))
+{
+alert("You have entered an invalid email address!");
+document.form1.email.focus();
+return false;
+}
+}
+</script>
+</head>
+<body align="center">
+<div class="star">
+<a href="web today.html" >Home</a>
+      <a href="about 2.html"  >About </a>
+	   <a href="registration.html"class="active" >Register</a>
+            <a href="Alu.html">Alumni</a>
+	        <a href="staff.html">staff</a>
+		    <a href="contact.html">contacts</a>
+</div>
+</div>
+
+
+<h2 style="color:white;"><u>Registration form</u></h2>
+
+
+<form  name="formz" onclick="return validateEmail()" method="post" action="insert.php" >
+
+
+<label>First Name:</label><br>
+<input type="text"First name="firstname"id="firstname" placeholder="Your firstname.."><br>
+<label>Last name:</label><br>
+<input type="text"Last name="lastname"id="Last name"placeholder="Your lastname.."><br>
+<label>Surname:</label><br>
+<input type="text" name="surname"id="surname"placeholder="Your surname.."><br>
+<label>Username:</label><br>
+<input type="text" name="username"id="username"placeholder="Your username.."><br>
+<label>password:</label><br>
+<input type="password"name="password"id="password"placeholder="Your password.."><br>
+<label>Contacts:</label><br>
+<input type="text"name="contacts"id="contacts"><br>
+<label>Cv:</label><br>
+<input type="file"name="cv"id="cv"placeholder="your Cv.."><br>
+<label>Email Address:</label><br>
+<input type="text"name="email"id="email"placeholder="Your email.."><br>
+<label>Phone Number:</label><br>
+<input type="text"name="pnumber"id="pnumber"placeholder="Your Phone number.."><br>
+<label>Instagram:</label><br>
+<input type="text"name="instagram"id="instagram"placeholder="username.."><br>
+<label>Facebook:</label><br>
+<input type="text"name="fbook"id="fbook"placeholder="username.."><br>
+<label>Twitter:</label><br>
+<input type="text"name="twitter"id="twitter"placeholder="username.."><br>
+
+
+
+
+
+<label for="submit">submit </label>
+<input type="submit"name="sbutton"id="sbutton"value="submit"  onclick =  "validateEmail(document.formz.email)">
+<label for="reset">reset </label>
+<input type="reset"name="rbutton"id="rbutton"value="reset">
+
+
+
+</form>
+</body>
+</html>
